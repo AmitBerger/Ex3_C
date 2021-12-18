@@ -1,8 +1,8 @@
-.PHONY = all clean
-all: stringProg
 FLAGS = -Wall -Werror -g
 CC = gcc
-stringProg: Ex3.c
-	$(CC) $(FLAGS) Ex3.c -o stringProg
+.PHONY = all clean
+all: stringProg
+stringProg: FuncAndMain.c
+	$(CC) $(FLAGS) FuncAndMain.c -o stringProg
 clean:
 	rm -f *.o *.a stringProg
